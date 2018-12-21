@@ -20,12 +20,11 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Spring Boot</a>
+            <a class="navbar-brand" href="#">Math Lab</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
+                <li class="active"><a href="#">Soma</a></li>
             </ul>
         </div>
     </div>
@@ -34,9 +33,12 @@
 <div class="container">
 
     <div class="starter-template">
-        <h2>
-            <span th:text="'Mensagem: ' + ${message}"></span>
-        </h2>
+        <form action="/calcula" method="post">
+            Valor1: <input name="valor1" required th:value="${valor1}">
+            Valor2: <input name="valor2" required th:value="${valor2}">
+            <button type="submit">Soma</button>
+            Soma: <input th:value="${valor3}">
+        </form>
     </div>
 
 </div>
